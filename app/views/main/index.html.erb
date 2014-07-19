@@ -1,0 +1,19 @@
+<div class="container" ng-controller="IndexCtrl">
+  <h1>My DF Command Parser</h1>
+<h2> Please paste your `df` command result </h2>
+   <form
+    <fieldset>
+      <textarea class="span12" style="height: 250px" ng-model="dfResult" placeholder="Please paste your df command  result here..."></textarea>
+	</br>
+      <button class="btn btn-primary" ng-click="startParser()">Start Parser</button>
+      <button class="btn btn-danger" ng-click="clearForm()">Clear Form</button>
+    </fieldset>
+  </form>
+<h2>Parser Result</h2>
+<strong>The file systems had been used with more than 80% and less than 2G left</strong>
+<table class="table table-condensed">
+  <tr class="error" ng-repeat="fileSystem in parserResult">
+    <td>{{fileSystem}}</td>
+  </tr>
+</table>
+</div>
