@@ -1,15 +1,48 @@
 == README
 
 General:
-1. The runtime website, you can refer to http://www.52wapp.com:3000/
+  1. The runtime website, you can refer to http://www.52wapp.com:3000/
 Copy and paste your `df` command result on Linux system, and then the website will tell you the file system that used more than 80\%, with less 2G
-2. It's an demo application to learn rails + angularJS + coffeeJS
-3. The version is ruby1.9.3, rails 4.1.4
+  2. It's an demo application to learn rails + angularJS + coffeeJS
+  3. The version is ruby1.9.3, rails 4.1.4
 
 A little more explanation:
-1. The frontend framework is MVC with angularJS + CoffeeJS, it just accept the input, and display the output. It will parser the data via a API to ruby to get the parser result.
-2. The backend framework is rails, it will render the website to user, and also supply an API to parser the df command result, and return it
+  1. The frontend framework is MVC with angularJS + CoffeeJS, it just accept the input, and display the output. It will parser the data via a API to ruby to get the parser result.
+  2. The backend framework is rails, it will render the website to user, and also supply an API to parser the df command result, and return it
 
+The roadmap that I set up the app
+
+Preparetion
+1. Preparetion
+  a. Find some merterial about Rails, Angular. The followling lik is good tutor for a beginner of Rails + AngularJS totior
+  https://github.com/asanderson15/rails-angular-tutorial
+    
+  b. The following link is very good metrial to learn coffeescript
+  http://coffee-script.org/
+
+2. Set up the enviroment
+  a. First I try to openshift.
+    a) I create Application on openshift ruby-sjj, but it also requires me to install the rails enviroment on my local machine. That's the nightmare
+    b) Install Rails, I got many problems. Can't install rails due the lack of ruby-dev, can't install ruby-dev due g++ extension error, can't install. The I decided to give up windows. After that, I happended read the artical https://ruby-china.org/topics/1020, it proves it's smart move.
+    c) The I move to develop on the openshift, after I try create git app, and rails app with permession denied, I believe it's virtual space rather than virtual machien.
+Finally, I decided to use my remote virtual machine ubuntu.
+
+  b. How to install Rails on Ubuntu
+    apt-get update
+    apt-get install ruby1.9
+    gem install rails
+
+3. Create App
+Create new project dfparser by following the tutior https://github.com/asanderson15/rails-angular-tutorial
+  a. Create angular controller under the frontend folder app/assets/javascript
+  b. Create the main ruby view file
+  c. Create coffeeJS for send request
+  d. Create the ruby controller
+    Learn the ruby grammer about how to deal with text, the number
+
+4. Deploy it to the ubuntu
+  a. I try to deploy it with Nginx， it  pop up there's error, I don't find out the reason.
+  b. At last, I just deploy it with nohup command.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
