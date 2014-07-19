@@ -1,27 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+General:
+1. The runtime website, you can refer to http://www.52wapp.com:3000/
+Copy and paste your `df` command result on Linux system, and then the website will tell you the file system that used more than 80\%, with less 2G
+2. It's an demo application to learn rails + angularJS + coffeeJS
+3. The version is ruby1.9.3, rails 4.1.4
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A little more explanation:
+1. The frontend framework is MVC with angularJS + CoffeeJS, it just accept the input, and display the output. It will parser the data via a API to ruby to get the parser result.
+2. The backend framework is rails, it will render the website to user, and also supply an API to parser the df command result, and return it
 
 
 Please feel free to use a different markup language if you do not plan to run
